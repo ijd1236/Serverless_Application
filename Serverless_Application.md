@@ -64,7 +64,83 @@
 
 ## AWS에 배포하기 위한 Serverless framework 설치
 
-![20230621_104028](https://github.com/ijd1236/Serverless_Application/assets/130967884/e62a0455-b9e6-4d44-89c9-3ad768fc15b2)
+https://www.serverless.com/framework/docs/getting-started
+
+- 위 링크의 사이트에 들어갑니다
+
+![20230621_101810](https://github.com/ijd1236/Serverless_Application/assets/130967884/5054138f-6a3d-4b3a-a8e7-841e6098fb02)
+
+- 먼저 서버리스 프로그렘을 설치해야합니다  install first를 누릅니다
+
+
+![20230621_101832](https://github.com/ijd1236/Serverless_Application/assets/130967884/24bebfe0-ffc3-4672-8a00-1151db99ccac)
+
+- 18.16.1 LTS 를 클릭하여 다운로드 받습니다.
+
+
+![20230621_103320](https://github.com/ijd1236/Serverless_Application/assets/130967884/a39af734-6299-4617-85a4-0f1920bab621)
+
+
+- 다운로드가 완료되면 Anaconda Prompt에서 npm install -g serverless 를 입력해 서버리스 프로그렘을 설치합니다.
+
+- 이제 Serverless framework 에 로그인하여 key 와환경을 app을 등록하겠습니다
+
+![20230621_103603](https://github.com/ijd1236/Serverless_Application/assets/130967884/a35ad696-4788-4f3c-92e1-8cdfb0b8c189)
+![20230621_105640](https://github.com/ijd1236/Serverless_Application/assets/130967884/971d216c-1d42-413d-9640-d5b8b7b06900)
+
+- 먼저 로그인 화면에서 org를 클릭 providers에서  add를 눌러 키를 추가합니다.
+- 
+![20230621_110247](https://github.com/ijd1236/Serverless_Application/assets/130967884/2f2728af-21fa-4e5f-802d-4541d8724474)
+
+- 여기서 이름은 위 aws  credentials 에서 입력한 이름 Access , Secret Key 는 위에서 csv파일에 받았던 Key를 입력해줍니다.
+
+
+- 다음은 app을 만들어줍니다.
+- 
+![20230621_103725](https://github.com/ijd1236/Serverless_Application/assets/130967884/b397f9da-3bea-45cb-9dc5-02fe59e9562d)
+
+- apps 에서 create  app을 클릭,
+
+![20230621_104028](https://github.com/ijd1236/Serverless_Application/assets/130967884/093457df-1ad3-4486-a472-e83c03ca9c8a)
+
+- python flask API 를 선택합니다
+
+![20230621_104222](https://github.com/ijd1236/Serverless_Application/assets/130967884/4af6a4bf-a383-4f4f-b5d6-e6298aec6bbc)
+
+
+- app 제목을 입력하고 create를 누릅니다
+
+![20230621_104651](https://github.com/ijd1236/Serverless_Application/assets/130967884/72211d2c-d780-4675-8ed9-b6dbf2867713)
+
+- 그럼 이런 코드들이 나오는데 이걸 그대로 사용하면 윈도우에서 적용되지 않으므로 해당 코드를 복사후 수정하는 과정을 거칩니다
+
+![20230621_105005](https://github.com/ijd1236/Serverless_Application/assets/130967884/d184c6ad-3036-45f6-8ff1-68b31de7445e)
+
+- 다음과 같이 #(백슬레쉬)를 지우고 한줄이 되게 붙입니다.
+
+![20230621_105006](https://github.com/ijd1236/Serverless_Application/assets/130967884/0988ee34-eb34-46dc-a546-1df01bc022cd)
+
+![20230621_105512](https://github.com/ijd1236/Serverless_Application/assets/130967884/6b59b36f-fffe-4d23-90d3-3acef0148158)
+![20230621_112316](https://github.com/ijd1236/Serverless_Application/assets/130967884/5adfa3fd-e252-48b5-9067-1258e349c19e)
+
+
+- 이후 anaconda prompt 에서 GitHub 경로로 들어간 후 위에서 만들어둔 코드를 입력하여 serverless 를 설치합니다. (app의 제목의 폴더가 GitHub 폴더에 만들어집니다)
+
+![20230621_112332](https://github.com/ijd1236/Serverless_Application/assets/130967884/ac46faff-dc89-4278-b341-b16c3a47c57f)
+
+
+- 그 다음 만들어진 폴더의 경로로 들어가 sls deploy 를 입력해 배포합니다.
+
+![20230621_112339](https://github.com/ijd1236/Serverless_Application/assets/130967884/e205978a-81dc-4b39-ae61-a176cbc81580)
+
+![20230621_112340](https://github.com/ijd1236/Serverless_Application/assets/130967884/300b252a-221c-4d8f-8570-7fd08d41c734)
+
+
+- 배포가 완료되면 엔드포인트에 주소가 나오는데 해당 주소를 검색창에 입력하여 들어가고 성공적으로 입력된지 확인합니다.
+
+
+
+
 
 
 

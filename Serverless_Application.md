@@ -56,7 +56,8 @@
 
 - 엑세스 키 만들기를 클릭하여 키를 만듭니다 (설명 태그 값음 안넣어도됩니다)
 
-![20230621_101042](https://github.com/ijd1236/Serverless_Application/assets/130967884/20e5fd56-9990-4cb1-a790-40852f3457b1)
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/bd93d886-a1a2-43e0-bca8-95e41e3f95f4)
+
 
 - 키가 생성되었습니다 생성된키를  csv 파일 다운로드를 눌러 다운받습니다.
 

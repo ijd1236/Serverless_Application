@@ -138,6 +138,61 @@ https://www.serverless.com/framework/docs/getting-started
 
 - 배포가 완료되면 엔드포인트에 주소가 나오는데 해당 주소를 검색창에 입력하여 들어가고 성공적으로 입력된지 확인합니다.
 
+## vs코드 작업과
+
+- 먼저 vs코드에서 Severless 로 실행하기 위한 작업을 합니다.
+
+- 기존에 만들었던 recipe 데이터베이스를 사용합니다.
+
+- vs코드에서 폴더 열기로 위에서 만든 aws-recipe-app을 엽니다
+
+![20230621_145705](https://github.com/ijd1236/Serverless_Application/assets/130967884/9fdad360-7aa0-4392-b406-3437660056a9)
+
+- requirements.txt 에서 기존 recipe API 에서 사용했던 라이브러리들을 입력합니다.
+
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/bf7f906b-c092-4b5d-acc8-d4fb41bb0000)
+
+- 기존 recipe vs코드의 파일들을  aws-recipe-app에 복사해서 옮겨줍니다
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/e82b7b58-5fe1-4c44-9a5b-4a42f0fdf144)
+
+- gitignoere에는 다음과 같이node_modules를 입력해줍니다
+
+
+![20230621_150539](https://github.com/ijd1236/Serverless_Application/assets/130967884/fea4753f-194a-44b4-b884-89d202c03e69)
+
+![20230621_152649](https://github.com/ijd1236/Serverless_Application/assets/130967884/b5bdfa4d-7217-4099-94e0-d07919405a22)
+
+- 이후 가상환경에서 sls deploy 를 입력해 배포한 다음 주소가 나오고 완료된걸 확인합니다.
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/7881bd41-174b-4cc0-a6ab-f4ade3b9c7e6)
+
+- 포스트맨에서 vs코드에서 나온 엔드포인트를 주소를 입력하고 정상적으로 작동하는지 확인합니다.
+
+
+## 깃허브 연동하기
+
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/39bfa058-a8ab-4c07-8923-45bf893fa402)
+
+- 깃허브 레파지토리를 프라이빗으로 설정하고 만들어줍니다.
+
+
+![20230621_164030](https://github.com/ijd1236/Serverless_Application/assets/130967884/c561b892-4649-4180-a23e-c8cf11fa2a03)
+
+- 그럼 위와 같이 나오는데 vs코드에서 command line 에 나온 코드들을 입력해 클론할 수 있습니다
+
+![20230621_164722](https://github.com/ijd1236/Serverless_Application/assets/130967884/f9cb5422-74e1-46c5-b49c-a0a277fc15db)
+
+- 먼저 git init 를 입력하면 위와 같이 커밋 할 수 있게 나옵니다. 파일들을 커밋해줍니다.
+- 이후 git branch -M main(푸시할 경로 만들기)  ,  git remote add origin https://github.com/ijd1236/aws-recipe-app.git(커밋할 주소랑 연결) 을 순서대로 입력하고
+- vs코드에서 푸시를 누르거나  터미널에서 git push -u origin main를 입력합니다.
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/e3ba797a-c609-4338-8d01-cd9cb8b0847c)
+
+- 푸시가 완료되면 잘되었는지 확인합니다
+
 
 
 

@@ -64,6 +64,7 @@
 
 ## AWS에 배포하기 위한 Serverless framework 설치
 
+![20230621_104028](https://github.com/ijd1236/Serverless_Application/assets/130967884/e62a0455-b9e6-4d44-89c9-3ad768fc15b2)
 
 
 

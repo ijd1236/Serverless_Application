@@ -193,8 +193,26 @@ https://www.serverless.com/framework/docs/getting-started
 
 - 푸시가 완료되면 잘되었는지 확인합니다
 
+## aws 서울 지역으로 배포하기
 
 
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/c139c762-2ae4-4404-9eb4-ebd274177c9e)
+
+- severless flamework 는 아직 서울 지역을 서비스 하지 않으니 org 와 app 항목을 제거후
+
+- provider 에 region: ap-northeast-2를 입력하고 저장합니다.
+  
+
+
+https://www.serverless.com/framework/docs/providers/aws/cli-reference/config-credentials
+
+- 이후 해당 링크에 들어가서 프라이빗 키를 등록해야합니다.
+
+serverless config credentials --provider aws --key Access key ID --secret Secret access key
+
+- 코드를 Anaconda Prompt에 입력합니다.
+
+- vs 코드에서 sls deploy 를 입력해 배포후 확인합니다.
 
 
 

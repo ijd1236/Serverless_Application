@@ -216,8 +216,60 @@ serverless config credentials --provider aws --key Access key ID --secret Secret
 
 
 
+## Git허브를 이용하여  자동 배포하기
+
+- vs코드에서 push 하면 자동으로 서버를 배포하는 작업입니다.
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/1209973f-f131-4e7f-a65b-c3a9e8f0ea97)
+
+- 먼저 serverless framework 에서 'main'이름의 access key를 추가해줍니다.
+ 
+![20230629_174513](https://github.com/ijd1236/Serverless_Application/assets/130967884/8ebbaf5a-af14-4664-bfa9-03f35f95e7d6)
+
+- 이후 자동배포를 할 연동된 Git 허프 레파지토리 설정 Secrets and variables -> Actions 에서
+- AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY(IAM 대시보드를 생성할때 받은 CSV파일의 키를 입력합니다)
+- SERVERLESS_ACCESS_KEY(방금 생성한 서버리스 억스세키를 입력합니다.)
+- 를 추가합니다.
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/718a4842-0edd-45f4-846f-a39257265459)
+
+- 이후 액션즈에서
+```Python
+name: Deploy sls app
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:     
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+    - uses: actions/checkout@v3
+    - name: install-python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: install serverless
+      run: npm i -g serverless
+    - run: serverless plugin install -n serverless-wsgi
+    - name: severless deploy
+      run: sls deploy --verbose --force
+```
+- 다음과 같은 코드를 입력하고
+
+![image](https://github.com/ijd1236/Serverless_Application/assets/130967884/16ad2f0f-5af1-424b-aa2c-8f86e148d809)
+
+- 정상작동하는지 확인하고,
+
+- vs코드에서 커밋 ->push를 눌러 정상적으로 배포하는지 확인합니다.
 
 
 
-- 
+
 
